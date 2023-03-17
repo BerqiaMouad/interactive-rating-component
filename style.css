@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --LightGrey: hsl(217, 12%, 63%);
+  --MediumGrey: hsl(216, 12%, 54%);
+  --DarkBlue: hsl(213, 19%, 18%);
+  --VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+* {
+  font-family: "Overpass", sans-serif;
+}
+
+html {
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  text-rendering: optimizeSpeed;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: var(--VeryDarkBlue);
+}
+body .rating_component {
+  z-index: -1;
+  position: relative;
+  width: 417px;
+  max-width: 25.75rem;
+  height: 416px;
+  background: linear-gradient(to bottom, hsl(215, 20%, 17%), hsl(215, 24%, 12%));
+  border-radius: 1.875rem;
+  display: block;
+}
+body .rating_component .upper_half {
+  margin: 0 32px;
+  padding: 32px 0;
+}
+body .rating_component .upper_half svg {
+  padding: 1rem;
+  background-color: hsla(216, 12%, 54%, 0.1);
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+body .rating_component .upper_half h1 {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--White);
+  margin: 0;
+  margin-bottom: 7px;
+  line-height: 1.25;
+}
+body .rating_component .upper_half p {
+  font-size: 15px;
+  color: var(--LightGrey);
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+}
+body .rating_component .lower_half {
+  margin: 0 32px;
+  display: block;
+}
+body .rating_component .lower_half .ratings {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  margin-block: 0 2rem;
+  margin-top: 0;
+}
+body .rating_component .lower_half .ratings .btn {
+  background-color: hsla(216, 12%, 54%, 0.15);
+  color: var(--MediumGrey);
+  font-size: 16px;
+  font-weight: 700;
+  width: 51px;
+  height: 51px;
+  border-radius: 51px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+body .rating_component .lower_half .ratings .btn:hover {
+  color: var(--White);
+  background-color: hsl(216, 12%, 54%);
+}
+body .rating_component .lower_half .ratings .btn.active {
+  color: var(--White);
+  background-color: var(--Orange);
+}
+body .rating_component .lower_half .btn_submit {
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  color: var(--White);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  height: 45px;
+  background-color: var(--Orange);
+  width: 100%;
+  border-radius: 45px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+body .rating_component .lower_half .btn_submit:hover {
+  color: var(--Orange);
+  background-color: var(--White);
+}
+body .thank_you_component {
+  z-index: -1;
+  position: absolute;
+  width: 417px;
+  max-width: 25.75rem;
+  height: 416px;
+  background: linear-gradient(to bottom, hsl(215, 20%, 17%), hsl(215, 24%, 12%));
+  border-radius: 1.875rem;
+  display: block;
+  place-items: center;
+}
+body .thank_you_component .result {
+  display: grid;
+  place-items: center;
+  margin-top: 45px;
+}
+body .thank_you_component .result svg {
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
+  padding-right: 10px;
+}
+body .thank_you_component .result .sentence_result {
+  font-size: 15px;
+  color: hsla(25, 97%, 53%, 0.7);
+  padding-inline: 1.25rem;
+  height: 1.9rem;
+  line-height: 2rem;
+  border-radius: 2rem;
+  background-color: hsla(216, 12%, 54%, 0.15);
+  margin-bottom: 32px;
+}
+body .thank_you_component .message {
+  text-align: center;
+}
+body .thank_you_component .message h1 {
+  color: var(--White);
+  font-size: 29px;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+body .thank_you_component .message p {
+  font-size: 15px;
+  color: var(--MediumGrey);
+  padding-left: 32px;
+  padding-right: 40px;
+  line-height: 24px;
+  margin-inline: auto;
+}
+body .rating_component.showen {
+  z-index: 1;
+}
+body .thank_you_component.showen {
+  z-index: 1;
+}
+
+@media only screen and (max-width: 376px) {
+  body .rating_component {
+    width: 325px;
+    height: 380px;
+    border-radius: 1rem;
+  }
+  body .rating_component .upper_half svg {
+    padding: 0.7rem;
+    margin-bottom: 10px;
+  }
+  body .rating_component .upper_half h1 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--White);
+    margin: 0;
+    margin-bottom: 10px;
+    line-height: 1.25;
+  }
+  body .rating_component .upper_half p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  body .rating_component .lower_half .ratings .btn {
+    font-size: 13px;
+    font-weight: 700;
+    width: 41px;
+    height: 41px;
+    border-radius: 51px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+  }
+  body .thank_you_component {
+    width: 325px;
+    height: 380px;
+    border-radius: 1rem;
+  }
+  body .thank_you_component .message h1 {
+    font-size: 21px;
+  }
+  body .thank_you_component .message p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}/*# sourceMappingURL=style.css.map */
