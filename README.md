@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://github.com/BerqiaMouad/interactive-rating-component)
-- Live Site URL: [Live Url](https://toaddlater.com)
+- Live Site URL: [Live Url](https://interactive-rating-component-mouad.netlify.app/)
 
 ## My process
 
